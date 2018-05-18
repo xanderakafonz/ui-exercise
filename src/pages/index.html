@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% set page = default %}
+{% block content %}
+	<!-- Main content -->
+	<h1>{{ page.heading | safe }}</h1>
+	<!-- How to include a partial file -->
+	{% include "partials/partial.html" %}
+{% endblock %}

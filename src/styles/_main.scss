@@ -68,7 +68,6 @@ html {
 
 .main {
     flex-basis: 70%;
-    margin-right: 20px;
 }
 
 h3 {
@@ -107,4 +106,8 @@ img {
 .sidebar {
     flex-basis: 30%;
     background: #8a8a8a;
+
+    &.open {
+        margin-left: 20px;
+    }
 }

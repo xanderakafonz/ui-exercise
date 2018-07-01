@@ -18,7 +18,6 @@ const Sidebar = class {
             const el = $(e.currentTarget)
 
             if (el.hasClass('active')) {
-
                 this.animate_in()
                 el.removeClass('active')
             }
@@ -41,6 +40,9 @@ const Sidebar = class {
         this.$sidebar.velocity({
             tween: [30, 0]
         }, {
+            begin: () => {
+                this.$sidebar.addClass('open')
+            },
             progress: (elms, c, r, s, tween) => {
                 this.$sidebar.css('flex-basis', tween + '%')
             }
@@ -61,6 +63,9 @@ const Sidebar = class {
         }, {
             progress: (elms, c, r, s, tween) => {
                 this.$sidebar.css('flex-basis', tween + '%')
+            },
+            complete: () => {
+                this.$sidebar.removeClass('open')
             }
         })
     }

@@ -24,3 +24,6 @@ production
 /*.php
 /*.css
 package-lock.json
+
+.idea/
+

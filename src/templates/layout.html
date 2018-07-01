@@ -10,13 +10,29 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <div class="container">
+            <nav class="navigation">
+                <ul class="items">
+                    <li class="item">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="item">
+                        <a href="/about">About</a>
+                    </li>
+                    <li class="item">
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <!-- Add this syntax to the page where you're extending this template -->
+    <div class="content container">
         {% block content %} {% endblock %}
-    </main>
-    <footer>
+    </div>
+    <footer class="footer">
+        <div class="container">
+        </div>
     </footer>
     <script src="assets/js/test.js"></script>
 </body>

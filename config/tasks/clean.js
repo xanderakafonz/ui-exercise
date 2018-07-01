@@ -11,7 +11,6 @@ export function clean() {
     `${Config.dist.webpack}`,
     `${Config.dist.img}`,
     `${Config.dist.fonts}`,
-    `${Config.dist.static}`,
     `${Config.dest}`,
     `${Config.dist.production}`,
     `${Config.config.maps}`,

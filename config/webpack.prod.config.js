@@ -3,7 +3,7 @@ const {GenerateSW} = require('workbox-webpack-plugin')
 
 module.exports = {
   output: {
-    filename: 'bundle.js'
+    filename: 'test.js'
   },
   mode: 'production', // Setting this to production auto enables JS uglify
   module: {

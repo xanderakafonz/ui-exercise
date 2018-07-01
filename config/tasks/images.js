@@ -44,17 +44,3 @@ export function imagesPng() {
     )
     .pipe(gulp.dest(Config.dist.img))
 }
-
-export function svgs() {
-  return gulp
-    .src(Config.src.svg, {
-      allowEmpty: true
-    })
-    .pipe(
-      changed(Config.dist.svg, {
-        hasChanged: changed.compareLastModifiedTime
-      })
-    )
-    .pipe(svgmin())
-    .pipe(gulp.dest(Config.dist.svg))
-}

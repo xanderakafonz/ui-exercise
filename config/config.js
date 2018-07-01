@@ -14,25 +14,20 @@ const dest = 'dist'
 const assets = 'assets'
 
 const src = {
-  dataFile: `${root}/${source}/data/data.json`,
   pages: `${root}/${source}/pages/*${fileExt}`,
   templates: `${root}/${source}/templates/**/*${fileExt}`,
   scss: `${root}/${source}/styles/**/*.scss`,
   webpack: `${root}/${source}/scripts/**/*.js`,
   img: `${root}/${source}/img/**/*.{jpg,gif}`,
   imgPng: `${root}/${source}/img/**/*.png`,
-  svg: `${root}/${source}/img/svgs/**/*.svg`,
   fonts: `${root}/${source}/fonts/**/*`,
-  static: `${root}/${source}/static/**/*`
 }
 
 const dist = {
   pages: `${root}/${dest}`,
   css: `${root}/${dest}`,
-  static: `${root}/${dest}/${assets}`,
   webpack: `${root}/${dest}/${assets}/js`,
   img: `${root}/${dest}/${assets}/img`,
-  svg: `${root}/${dest}/${assets}/img/svgs`,
   fonts: `${root}/${dest}/${assets}/fonts`,
   production: `${root}/production`
 }
@@ -44,7 +39,7 @@ const config = {
   templates: [`${root}/${source}/templates/`, `${source}/templates/partials/`], // Default file paths for nunjucks
   pagesWatch: `${root}*${fileExt}`, // HTML injection  - This is the directory where pages are output
   production: !!util.env.production, // Used for production deployment
-  criticalCss: `${dist.production}/style.css` // Accepts arrays
+  criticalCss: `${dist.production}/test.css` // Accepts arrays
 }
 
 module.exports = {

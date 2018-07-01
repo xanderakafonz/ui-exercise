@@ -5,7 +5,7 @@ import {clean, cleanProd} from './config/tasks/clean'
 import {nunjucksPages, nunjucksTemplates} from './config/tasks/templating'
 import {sass, criticalCss, scssLint} from './config/tasks/styles'
 import {fonts} from './config/tasks/fonts'
-import {images, imagesPng, svgs} from './config/tasks/images'
+import {images, imagesPng} from './config/tasks/images'
 import {duplicateFiles, duplicateProdFiles} from './config/tasks/duplicate-files'
 import {bs, bsReload} from './config/tasks/server'
 import {watch} from './config/tasks/watch'
@@ -22,16 +22,15 @@ exports.criticalCss = criticalCss
 exports.scssLint = scssLint
 exports.images = images
 exports.imagesPng = imagesPng
-exports.svgs = svgs
 exports.fonts = fonts
-exports.duplicateFiles = duplicateFiles
-exports.duplicateProdFiles = duplicateProdFiles
+// exports.duplicateFiles = duplicateFiles
+// exports.duplicateProdFiles = duplicateProdFiles
 exports.watch = watch
 exports.bs = bs
 exports.bsReload = bsReload
 
 // Define build and run tasks
-const build = gulp.parallel(nunjucksPages, sass, webpackBundle, images, imagesPng, svgs, fonts, duplicateFiles)
+const build = gulp.parallel(nunjucksPages, sass, webpackBundle, images, imagesPng, fonts)
 const run = gulp.parallel(bs, watch)
 
 // Additional tasks that may/will need to be run individually

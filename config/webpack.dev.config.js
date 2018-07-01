@@ -2,7 +2,7 @@
 
 module.exports = {
   output: {
-    filename: 'bundle.js'
+    filename: 'test.js'
   },
   mode: 'development',
   module: {

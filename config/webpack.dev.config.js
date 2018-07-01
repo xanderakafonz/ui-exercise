@@ -1,4 +1,6 @@
 // webpack.config.js
+const webpack = require('webpack')
+const path = require('path')
 
 module.exports = {
   output: {
@@ -27,6 +29,19 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    alias: {
+        "velocity": path.resolve('node_modules', 'velocity-animate/velocity.min.js')
+    },
+  },
+  plugins: [
+      new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: "jquery",
+          'window.$': 'jquery',
+          'window.jQuery': 'jquery'
+      })
+  ],
   // Source maps
   devtool: 'eval-source-map'
 }

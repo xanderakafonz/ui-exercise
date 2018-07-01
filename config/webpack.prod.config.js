@@ -1,4 +1,6 @@
 // webpack.config.js
+const webpack = require('webpack')
+const path = require('path')
 const {GenerateSW} = require('workbox-webpack-plugin')
 
 module.exports = {
@@ -18,8 +20,19 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    alias: {
+        "velocity": path.resolve('node_modules', 'velocity-animate/velocity.min.js')
+    },
+  },
   plugins: [
     // Workbox - Generate Service Worker
-    new GenerateSW()
+    new GenerateSW(),
+    new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: "jquery",
+        'window.$': 'jquery',
+        'window.jQuery': 'jquery'
+    })
   ]
 }

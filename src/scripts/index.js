@@ -1,6 +1,4 @@
-/*
- * @title App
- * @description Application entry point
- */
-// import {Something} from './partial'
+new Sidebar from './sidebar'
+
+new Sidebar()
 

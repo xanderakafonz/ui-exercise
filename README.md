@@ -47,3 +47,18 @@ Add a new link to the header called "sidebar", when clicked on will show/hide th
 Finish up
 ---------
 Once you're finished, send us a link to your fork.
+
+To run
+------
+
+`$ npm i gulp -g`
+
+`$ npm i gulp-cli -g`
+
+`$ npm i`
+
+`$ npm run dev`
+For local development
+
+`$ npm run build`
+For production

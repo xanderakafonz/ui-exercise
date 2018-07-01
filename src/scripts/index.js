@@ -1,4 +1,4 @@
-new Sidebar from './sidebar'
+import Sidebar from './sidebar'
 
 new Sidebar()
 

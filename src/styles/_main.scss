@@ -34,12 +34,19 @@ html {
     display: flex;
 
     .items {
+        width: 100%;
         display: flex;
     }
 
     .item {
         margin-right: 20px;
         text-transform: uppercase;
+
+        &.toggle {
+            margin-right: 0;
+            margin-left: auto;
+            align-self: flex-end;
+        }
     }
 
     a {
